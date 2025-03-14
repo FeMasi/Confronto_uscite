@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+
 # Caricamento dati
 st.title("Dashboard Comparativa Fatturato e Quantità")
 uploaded_file = st.file_uploader("Carica il file Excel", type=["xlsx"])
