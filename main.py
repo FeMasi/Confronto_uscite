@@ -1,16 +1,17 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
+import os
 
 # Caricamento dati
 st.title("Dashboard Comparativa Fatturato e Quantità")
-uploaded_file = st.file_uploader("Carica il file Excel", type=["xlsx"])
 
 
-if uploaded_file:
-    df = pd.read_excel(uploaded_file)
-
+file_path = "dati.xlsx"
+if os.path.exists(file_path):
+    df = pd.read_excel(file_path)
+else:
+    st.error("Il file dati.xlsx non è stato trovato. Assicurati che sia nella cartella del progetto.")
     month_map = {
         'Gennaio': 1, 'Febbraio': 2, 'Marzo': 3, 'Aprile': 4, 'Maggio': 5, 'Giugno': 6,
         'Luglio': 7, 'Agosto': 8, 'Settembre': 9, 'Ottobre': 10, 'Novembre': 11, 'Dicembre': 12
