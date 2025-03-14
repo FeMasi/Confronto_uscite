@@ -7,7 +7,7 @@ import os
 st.title("Dashboard Comparativa Fatturato e Quantità")
 
 
-file_path = "dati.xlsx"
+file_path = "file_comparativo.xlsx"
 if os.path.exists(file_path):
     df = pd.read_excel(file_path)
 else:
