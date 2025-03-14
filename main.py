@@ -25,7 +25,7 @@ df['MESE_NUM'] = df['MESE'].map(month_map)
 
 # Selezione multipla di clienti
 clienti = df['CLIENTE'].unique()
-clienti_selezionati = st.multiselect("Seleziona uno o più clienti", clienti, default=clienti["STAT SPA"])
+clienti_selezionati = st.multiselect("Seleziona uno o più clienti", clienti, default=clienti["STAT S.P.A"])
 
 
 # Selezione multipla di mesi per grafici per cliente
